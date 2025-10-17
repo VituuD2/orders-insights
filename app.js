@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const price = parseFloat(String(row["Preço venda"]).replace(",", ".")) || 0;
             const quantity = parseInt(row["Quantidade"]) || 0;
             if (!ordersMap.has(orderId)) {
-                const hasSpecialSKU = row["SKU"] === "SBSR00S-K001";
+                const hasSpecialSKU = row["Código (SKU)"] === "SBSR00S-K001";
                 ordersMap.set(orderId, {
                     numero: orderId,
                     nome: row["Nome"],
